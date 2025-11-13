@@ -67,8 +67,6 @@ const Header = () => {
 
   return (
     <div className="relative">
-     
-
       <div className="bg-gradient-to-b from-gray-300 to-white">
         <div className="h-[90px]"></div>
         <h1
