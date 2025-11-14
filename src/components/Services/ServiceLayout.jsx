@@ -1,6 +1,6 @@
 const ServiceLayout = () => {
   return (
-    <div id="#services " className="p-8 max-w-7xl mx-auto">
+    <div id="#services " className="container p-8  mx-auto">
       <div className="text-center">
         <h1 className="text-4xl font-semibold">
           Explore Our Expert Design <br />
@@ -12,8 +12,9 @@ const ServiceLayout = () => {
         </p>
       </div>
 
-      <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
-        <div className="rounded-3xl p-6 border shadow-sm bg-gradient-to-b from-emerald-100 to-white ">
+      <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+        <div className="hover-3d">
+          <div className="rounded-3xl p-6 border shadow-sm bg-gradient-to-b from-emerald-100 to-white ">
           <div className="bg-white rounded-full p-2 w-max text-xl ">💻</div>
           <div className="text-3xl font-semibold mb-2 mt-6">Web Design</div>
           <div className="text-sm font-semibold text-gray-500 mt-32">
@@ -36,9 +37,21 @@ const ServiceLayout = () => {
               CMS
             </span>
           </div>
+
+          </div>
+            <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+
         </div>
 
-        <div className="rounded-3xl p-6 border shadow-sm bg-gradient-to-b from-rose-100 to-white">
+        <div className="hover-3d">
+          <div className="rounded-3xl p-6 border shadow-sm bg-gradient-to-b from-rose-100 to-white">
           <div className="bg-white rounded-full p-2 w-max text-xl ">✨</div>
           <div className="text-3xl font-semibold mb-2 mt-6">Branding</div>
           <div className="text-sm font-semibold text-gray-500 mt-32">
@@ -55,9 +68,19 @@ const ServiceLayout = () => {
               Brand Strategy
             </span>
           </div>
+          </div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
         </div>
 
-        <div className="rounded-3xl p-6 border shadow-sm bg-gradient-to-b from-gray-100 to-white">
+        <div className="hover-3d">
+          <div className="rounded-3xl p-6 border shadow-sm bg-gradient-to-b from-gray-100 to-white">
           <div className="bg-white rounded-full p-2 w-max text-xl ">🎬</div>
           <div className="text-3xl font-semibold mb-2 mt-6">Animations</div>
           <div className="text-sm font-semibold text-gray-500 mt-32">
@@ -74,11 +97,21 @@ const ServiceLayout = () => {
               Interactive Elements
             </span>
           </div>
+          </div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
         </div>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-        <div className="rounded-3xl p-6 border shadow-sm bg-gray-800 text-white md:col-span-2">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="hover-3d md:col-span-2">
+          <div className="rounded-3xl p-6 border shadow-sm bg-gray-800 text-white ">
           <div className="bg-gray-700 rounded-full p-2 w-max text-xl ">📈</div>
           <div className="text-3xl font-semibold mb-2 mt-6">SEO & SEA</div>
 
@@ -102,9 +135,19 @@ const ServiceLayout = () => {
               Local & Global SEO
             </span>
           </div>
+          </div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
         </div>
 
-        <div className="rounded-3xl p-6 border shadow-sm bg-gradient-to-b from-gray-200 to-white">
+        <div className="hover-3d">
+          <div className="rounded-3xl p-6 border shadow-sm bg-gradient-to-b from-gray-200 to-white">
           <div className="bg-white rounded-full p-2 w-max text-xl ">🔧</div>
           <div className="text-3xl font-semibold mb-2 mt-6">Maintenance</div>
 
@@ -128,6 +171,15 @@ const ServiceLayout = () => {
               CMS
             </span>
           </div>
+          </div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
         </div>
       </div>
     </div>

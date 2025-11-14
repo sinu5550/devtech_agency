@@ -14,40 +14,72 @@ const Navbar = () => {
   const location = useLocation();
   const navigate = useNavigate();
 
-  useLayoutEffect(() => {
-    const ctx = gsap.context(() => {
-      gsap.set(logoSmallRef.current, { y: -50, opacity: 0 });
+useLayoutEffect(() => {
+  const ctx = gsap.context(() => {
 
-      const tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: document.body,
-          start: "top+=165 top",
-          end: "+=100",
-          scrub: true,
-        },
-      });
+    // Initial state
+    gsap.set(logoSmallRef.current, { y: -50, opacity: 0 });
 
-      tl.to(logoSmallRef.current, { y: 0, opacity: 1, duration: 1 }, 0);
-      tl.to(menuItemsRef.current, { x: 100, duration: 1 }, 0);
-
-      ScrollTrigger.create({
+    // === FIRST ANIMATION (logo + menu shift) ===
+    const mainTL = gsap.timeline({
+      scrollTrigger: {
         trigger: document.body,
-        start: "top+=230 top",
-        onUpdate: (self) => {
-          const nav = fixedNavRef.current;
-          if (self.progress > 0) {
-            nav.classList.add("bg-white", "shadow-lg");
-            nav.classList.remove("py-8");
-          } else {
-            nav.classList.remove("bg-white", "shadow-lg");
-            nav.classList.add("py-8");
-          }
-        },
-      });
-    }, fixedNavRef);
+        start: "top+=165 top",
+        end: "+=100",
+        scrub: true,
+      },
+    });
 
-    return () => ctx.revert();
-  }, []);
+    mainTL.to(logoSmallRef.current, { y: 0, opacity: 1, duration: 1 }, 0);
+    mainTL.to(menuItemsRef.current, { x: 100, duration: 1 }, 0);
+
+
+    const nav = fixedNavRef.current;
+
+    // === BACKGROUND APPEARS WHEN ANIMATION STARTS ===
+    ScrollTrigger.create({
+      trigger: document.body,
+      start: "top+=180 top",
+      onEnter: () => {
+        nav.classList.add("bg-white", "shadow-lg");
+      },
+      onLeaveBack: () => {
+        nav.classList.remove("bg-white", "shadow-lg");
+      },
+    });
+
+
+    const containerAnim = gsap.timeline({ paused: true });
+
+containerAnim.to(nav, {
+  scaleX: 0.80,               // shrink to 85%
+  borderRadius: "14px",
+  duration: 0.6,
+  ease: "power3.out",
+  transformOrigin: "center top", // <- shrink from center
+});
+
+// After animation finishes, apply Tailwind container class
+containerAnim.call(() => {
+  nav.classList.add("container", "mx-auto","mt-6", "backdrop-blur-md","bg-white/75");
+  nav.style.transform = ""; // reset transform
+});
+    ScrollTrigger.create({
+  trigger: document.body,
+  start: "top+=275 top",
+  onEnter: () => containerAnim.play(),
+  onLeaveBack: () => {
+    nav.classList.remove("container", "mx-auto","mt-6", "backdrop-blur-md","bg-white/75");
+    containerAnim.reverse();
+  },
+});
+
+  }, fixedNavRef);
+
+  return () => ctx.revert();
+}, []);
+
+
 
   // Scroll handler
   const handleScroll = (id) => {
@@ -73,7 +105,7 @@ const Navbar = () => {
   return (
     <header
       ref={fixedNavRef}
-      className="fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-in-out py-8 px-8"
+      className="fixed top-0 left-0 right-0 z-50 transition-all duration-500 ease-in-out px-8 w-full "
     >
       <div className="flex justify-between items-center w-full py-4">
         <div className="flex items-center gap-6">

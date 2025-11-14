@@ -14,6 +14,8 @@ const Home = () => {
         <h2 className="text-center py-20 text-4xl font-bold">
           Pricing Section
         </h2>
+
+        
       </section>
 
       <section id="about" className="min-h-[100vh] bg-gray-100">

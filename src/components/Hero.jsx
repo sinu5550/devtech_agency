@@ -7,7 +7,7 @@ export const Hero = () => {
     <main className="relative ">
       <div className="absolute inset-0   "></div>
       <div
-        className="absolute inset-0  bg-contain bg-no-repeat  bg-center opacity-5 mb-[-5%] " // Add other background classes here
+        className="absolute inset-0  bg-contain bg-no-repeat  bg-center opacity-5  mt-[-5%]" // Add other background classes here
         style={{
           backgroundImage: `url(${logo})`,
         }}
@@ -33,7 +33,7 @@ export const Hero = () => {
           </button>
         </div>
 
-        <div className="text-center mt-40">
+        <div className="text-center mt-32">
           We help business all around the world to grow.
         </div>
       </div>

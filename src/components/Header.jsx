@@ -2,6 +2,7 @@ import React, { useRef, useLayoutEffect } from "react";
 import { Hero } from "./Hero";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import LogoTicker from "./Home/LogoTicker";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -76,8 +77,9 @@ const Header = () => {
           DevTech.
         </h1>
       </div>
-
+      
       <Hero />
+      <LogoTicker />
     </div>
   );
 };
