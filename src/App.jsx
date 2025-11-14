@@ -1,25 +1,15 @@
+import Header from "./components/Header";
 
-import Header from "./components/Header"
-import TechWorld from "./components/TechWorld"
-import * as THREE from 'three'
-import React, { Suspense, useRef } from 'react'
-import ServiceLayout from "./components/Services/ServiceLayout"
-
-
-
-
-
+import ServiceLayout from "./components/Services/ServiceLayout";
 
 export default function App() {
   return (
     <main className="mx-auto">
-      
-    {/* background */}
+      {/* background */}
 
-    <Header/>
-    
-    <ServiceLayout />
-    
+      {/* <Header />
+
+      <ServiceLayout /> */}
     </main>
-  )
+  );
 }
