@@ -4,7 +4,7 @@ import ServiceLayout from "../Services/ServiceLayout";
 import { StatsSection } from "./StatsSection";
 
 import About from "../About/About";
-import Tools from "../Tools/Tools";
+import ToolSection from "../ToolSection/ToolSection";
 
 const Home = () => {
   return (
@@ -18,7 +18,7 @@ const Home = () => {
       </section>
 
       <section id="expertise">
-        <Tools />
+        <ToolSection />
       </section>
 
       <section id="about" className="bg-gray-50 pt-20">

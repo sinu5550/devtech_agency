@@ -22,7 +22,7 @@ import { PiPenNibBold } from "react-icons/pi";
 import { MdOutlineVideoSettings } from "react-icons/md";
 import { CgArrowBottomRightR } from "react-icons/cg";
 
-const Tools = () => {
+const ToolSection = () => {
   const [activeTab, setActiveTab] = useState(0);
 
   const categories = [
@@ -132,4 +132,4 @@ const Tools = () => {
   );
 };
 
-export default Tools;
+export default ToolSection;
