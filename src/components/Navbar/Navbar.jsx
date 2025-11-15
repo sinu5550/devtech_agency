@@ -50,14 +50,13 @@ const Navbar = () => {
       const containerAnim = gsap.timeline({ paused: true });
 
       containerAnim.to(nav, {
-        scaleX: 0.8, 
+        scaleX: 0.8,
         borderRadius: "14px",
         duration: 0.6,
         ease: "power3.out",
-        transformOrigin: "center top", 
+        transformOrigin: "center top",
       });
 
-    
       containerAnim.call(() => {
         nav.classList.add(
           "container",
@@ -117,7 +116,11 @@ const Navbar = () => {
       >
         <div className="flex justify-between items-center w-full py-4">
           <div className="flex items-center gap-6">
-            <p ref={logoSmallRef} className="font-bold text-lg md:text-2xl">
+            <p
+              ref={logoSmallRef}
+              className="font-bold text-lg md:text-2xl cursor-pointer"
+              onClick={() => handleScroll("home")}
+            >
               DevTech.
             </p>
             <nav
@@ -125,14 +128,13 @@ const Navbar = () => {
               className="ml-[-100px] hidden md:flex items-center w-max py-3 px-5 bg-gray-100 gap-12 rounded-md font-semibold"
             >
               <button onClick={() => handleScroll("services")}>Services</button>
-              <button onClick={() => handleScroll("pricing")}>Pricing</button>
+              <button onClick={() => handleScroll("pricing")}>Expertise</button>
               <button onClick={() => handleScroll("about")}>About</button>
-              <button onClick={() => handleScroll("insights")}>Insights</button>
-              <button onClick={() => handleScroll("contact")}>Contact</button>
+              <button onClick={() => handleScroll("footer")}>Contact</button>
             </nav>
           </div>
           <button className="py-3 px-5 bg-gray-100 rounded-md font-semibold flex items-center gap-2 ml-4">
-            Get Started <FaArrowRight />
+            Get a Quote <FaArrowRight />
           </button>
         </div>
       </div>

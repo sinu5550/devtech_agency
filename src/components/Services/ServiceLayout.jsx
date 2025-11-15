@@ -80,7 +80,9 @@ const ServiceLayout = () => {
         <div className="hover-3d">
           <div className="rounded-3xl p-6 border shadow-sm bg-gradient-to-b from-gray-100 to-white">
             <div className="bg-white rounded-full p-2 w-max text-xl ">🎬</div>
-            <div className="text-3xl font-semibold mb-2 mt-6">Animations</div>
+            <div className="text-3xl font-semibold mb-2 mt-6">
+              Video Editing
+            </div>
             <div className="text-sm font-semibold text-gray-500 mt-32">
               Boost visibility and online presence.
             </div>

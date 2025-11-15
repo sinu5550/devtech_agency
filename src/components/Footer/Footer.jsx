@@ -1,8 +1,9 @@
 import React from "react";
+import { CiMail } from "react-icons/ci";
 
 const Footer = () => {
   return (
-    <div>
+    <div id="footer">
       <footer class="w-full py-14">
         <div class="mx-auto container px-4 sm:px-6 lg:px-8">
           <div class="border-b border-gray-200 pb-14 flex justify-between items-center flex-col gap-8 lg:gap-0 lg:flex-row">
@@ -37,15 +38,20 @@ const Footer = () => {
                   DevTech.
                 </h1>
               </a>
-              <p class="py-8 text-gray-500 lg:max-w-xs text-center lg:text-left">
-                Trusted in more than 100 countries & 5 million customers. Have
-                any query ?
+              <p class="py-6 text-gray-500 lg:max-w-xs text-center lg:text-left ">
+                <span className="text-xl ">The Technology you can trust</span>
+                <br /> <br />
+                <span className="text-sm ">
+                  Digital Transformation Pioneers: Crafting Exceptional Web,
+                  Mobile & UI/UX Solutions
+                </span>
               </p>
+
               <a
                 href="javascript:;"
-                class="py-2 px-5 h-9  w-fit bg-gray-200 rounded-full shadow-sm text-md text-black mx-auto transition-all  duration-500 hover:bg-gray-200 lg:mx-0"
+                class="flex justify-center items-center gap-2 py-2 px-5 h-9 w-fit bg-gray-200 rounded-full shadow-sm text-md text-black mx-auto transition-all  duration-500 hover:bg-gray-200 lg:mx-0"
               >
-                Contact us
+                <CiMail /> Contact us
               </a>
             </div>
 
@@ -89,14 +95,14 @@ const Footer = () => {
                     href="javascript:;"
                     class=" text-gray-600 whitespace-nowrap hover:text-gray-900"
                   >
-                    Pro Version
+                    Services
                   </a>
                 </li>
               </ul>
             </div>
 
             <div class="lg:mx-auto text-left ">
-              <h4 class="text-lg text-gray-900 font-medium mb-7">Products</h4>
+              <h4 class="text-lg text-gray-900 font-medium mb-7">Services</h4>
               <ul class="text-sm  transition-all duration-500">
                 <li class="mb-6">
                   <a

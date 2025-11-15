@@ -2,36 +2,31 @@ import React from "react";
 import Header from "../Header";
 import ServiceLayout from "../Services/ServiceLayout";
 import { StatsSection } from "./StatsSection";
+import Tools from "../Tools/tools";
+import About from "../About/About";
 
 const Home = () => {
   return (
     <div>
-      <Header></Header>
+      <section id="home">
+        <Header></Header>
+      </section>
       <StatsSection />
       <section id="services">
         <ServiceLayout />
       </section>
 
-      <section id="pricing" className="min-h-[100vh] bg-gray-50">
-        <h2 className="text-center py-20 text-4xl font-bold">
-          Pricing Section
-        </h2>
+      <section id="pricing">
+        <Tools />
       </section>
 
-      <section id="about" className="min-h-[100vh] bg-gray-100">
-        <h2 className="text-center py-20 text-4xl font-bold">About Section</h2>
-      </section>
-
-      <section id="insights" className="min-h-[100vh] bg-gray-200">
-        <h2 className="text-center py-20 text-4xl font-bold">
-          Insights Section
-        </h2>
-      </section>
-
-      <section id="contact" className="min-h-[100vh] bg-gray-300">
-        <h2 className="text-center py-20 text-4xl font-bold">
-          Contact Section
-        </h2>
+      <section id="about" className="bg-gray-50 pt-20">
+        <div className="flex justify-center ">
+          <h2 className="text-4xl font-semibold border-black border-b-2 w-max">
+            About Us
+          </h2>
+        </div>
+        <About />
       </section>
     </div>
   );
