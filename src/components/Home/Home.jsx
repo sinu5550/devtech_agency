@@ -1,11 +1,13 @@
 import React from "react";
 import Header from "../Header";
 import ServiceLayout from "../Services/ServiceLayout";
+import { StatsSection } from "./StatsSection";
 
 const Home = () => {
   return (
     <div>
       <Header></Header>
+      <StatsSection />
       <section id="services">
         <ServiceLayout />
       </section>
@@ -14,8 +16,6 @@ const Home = () => {
         <h2 className="text-center py-20 text-4xl font-bold">
           Pricing Section
         </h2>
-
-        
       </section>
 
       <section id="about" className="min-h-[100vh] bg-gray-100">

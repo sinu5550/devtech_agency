@@ -1,6 +1,6 @@
 const ServiceLayout = () => {
   return (
-    <div id="#services " className="container p-8  mx-auto">
+    <div id="#services " className="container py-8  mx-auto">
       <div className="text-center">
         <h1 className="text-4xl font-semibold">
           Explore Our Expert Design <br />
