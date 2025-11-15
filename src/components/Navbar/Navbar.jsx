@@ -128,7 +128,9 @@ const Navbar = () => {
               className="ml-[-100px] hidden md:flex items-center w-max py-3 px-5 bg-gray-100 gap-12 rounded-md font-semibold"
             >
               <button onClick={() => handleScroll("services")}>Services</button>
-              <button onClick={() => handleScroll("pricing")}>Expertise</button>
+              <button onClick={() => handleScroll("expertise")}>
+                Expertise
+              </button>
               <button onClick={() => handleScroll("about")}>About</button>
               <button onClick={() => handleScroll("footer")}>Contact</button>
             </nav>

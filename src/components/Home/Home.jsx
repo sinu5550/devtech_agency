@@ -2,8 +2,9 @@ import React from "react";
 import Header from "../Header";
 import ServiceLayout from "../Services/ServiceLayout";
 import { StatsSection } from "./StatsSection";
-import Tools from "../Tools/tools";
+
 import About from "../About/About";
+import Tools from "../Tools/Tools";
 
 const Home = () => {
   return (
@@ -16,7 +17,7 @@ const Home = () => {
         <ServiceLayout />
       </section>
 
-      <section id="pricing">
+      <section id="expertise">
         <Tools />
       </section>
 
